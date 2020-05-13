@@ -11,5 +11,5 @@
 API used: [Official Joke API](https://github.com/15Dkatz/official_joke_api).
 
 ```diff
-- Note: Internet Connection needed
+- Note: Internet Connection needed to use the API
 ```
