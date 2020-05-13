@@ -23,8 +23,14 @@ function App() {
     await axios
       .get(`https://official-joke-api.appspot.com/jokes/${type}/ten`)
       .then((res) => {
-        for (var i = 0; i < amount; i++) {
-          temp.push(res.data[i]);
+        if (type === "knock-knock") {
+          for (var i = 0; i < 4; i++) {
+            temp.push(res.data[i]);
+          }
+        } else {
+          for (var i = 0; i < amount; i++) {
+            temp.push(res.data[i]);
+          }
         }
 
         setJokes(temp);
