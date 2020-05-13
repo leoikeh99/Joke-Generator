@@ -62,7 +62,10 @@ export const Home = ({ loading, jokes, getJoke, getJokes }) => {
             <a href="https://twitter.com/wazza_dev" target="_blank">
               <i className="fab fa-twitter"></i>{" "}
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://github.com/leoikeh99/Joke-Generator"
+              target="_blank"
+            >
               <i className="fab fa-github"></i>
             </a>
           </div>
