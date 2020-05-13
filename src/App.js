@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Home from "./components/Home";
+import axios from "axios";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const [jokes, setJokes] = useState([{ punchline: " ", setup: " " }]);
+
+  const getJoke = async (type) => {
+    setLoading(true);
+    await axios
+      .get(`https://official-joke-api.appspot.com/jokes/${type}/random`)
+      .then((res) => {
+        setJokes(res.data);
+        setLoading(false);
+      });
+  };
+
+  const getJokes = async (type, amount) => {
+    setLoading(true);
+    var temp = [];
+    await axios
+      .get(`https://official-joke-api.appspot.com/jokes/${type}/ten`)
+      .then((res) => {
+        for (var i = 0; i < amount; i++) {
+          temp.push(res.data[i]);
+        }
+
+        setJokes(temp);
+        setLoading(false);
+      })
+      .catch((err) => console.err);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Home
+      loading={loading}
+      jokes={jokes}
+      getJoke={getJoke}
+      getJokes={getJokes}
+    />
   );
 }
 

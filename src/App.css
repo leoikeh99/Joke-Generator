@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #5d5d5a;
+  color: #fff4e3;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul .second {
+  color: #ffa45c;
+  padding: 10px;
+  border: 0.5px solid #ffa45c;
 }
 
-.App-link {
-  color: #61dafb;
+.second a {
+  color: #ffa45c;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.second a:hover {
+  color: #fff4e3;
+  text-decoration: none;
+}
+
+ul .second:hover {
+  border: 0.5px solid #fff4e3;
+  cursor: pointer;
+}
+
+.mt {
+  margin-top: 40px;
+}
+
+h1 {
+  margin: 5px;
+  padding: 0;
+}
+
+.main li {
+  display: inline-block;
+}
+
+.first select,
+.amount select {
+  padding: 10px;
+  font-family: "Permanent Marker", cursive;
+  margin-right: 5px;
+  border: 0px solid #ffa45c;
+  background-color: #41413b;
+}
+
+.first select option,
+.amount option {
+  padding: 10px 0px;
+  background-color: #51514d;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.result {
+  background-color: #686863;
+  padding: 5px;
+  margin-top: 10px;
+  color: #ffcdab;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+.contact {
+  padding: 5px;
+  background-color: #51514d;
+  margin-top: 3px;
+  color: #fff4e3;
+  display: block;
+}
+
+.contact a {
+  color: #fff4e3;
+  text-decoration: none;
+}
+
+.contact a :hover {
+  color: #ffa45c;
+}
+
+.card2 {
+  padding: 10px;
+  background-color: #51514d;
+  margin-top: 2px;
+}
+
+.card {
+  padding: 10px;
+  background-color: #51514d;
+}
+
+.card p {
+  margin: 3px 0px;
+}
+
+img {
+  max-width: 70px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: auto;
   }
 }
