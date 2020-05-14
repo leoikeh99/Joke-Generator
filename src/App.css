@@ -105,6 +105,7 @@ h1 {
 .card {
   padding: 10px;
   background-color: #51514d;
+  margin-bottom: 5px;
 }
 
 .card p {
